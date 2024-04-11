@@ -63,8 +63,3 @@ include_once('header.php');
     include_once('footer.php'); 
     ?>
 
-    <script src="js/menu.js"></script>
-    <script src="js/slider.js"></script>
-    <script src="js/accordion.js"></script>
-</body>
-</html>

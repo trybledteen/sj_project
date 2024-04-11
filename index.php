@@ -131,7 +131,4 @@ include_once('header.php');
     include_once('footer.php'); 
     ?>
    
-    <script src="js/menu.js"></script>
-    <script src="js/slider.js"></script>
-</body>
-</html>
+

@@ -1,3 +1,6 @@
+<?php
+    require_once('inc/function.php'); 
+?>
 <footer class="container bg-dark text-white">
     <div class="row">
       <div class="col-25">
@@ -16,3 +19,7 @@
       Created by Viktoriia Oliynyk 
     </div>
 </footer>
+<?php
+        add_scripts();
+    ?>
+</html>
