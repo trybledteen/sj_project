@@ -1,7 +1,4 @@
-<?php
-    require_once('inc/function.php'); 
-?>
-<footer class="container bg-dark text-white">
+<footer class="container-login bg-dark text-white">
     <div class="row">
       <div class="col-25">
         <h3>Social network</h3>
@@ -11,15 +8,23 @@
       </div>
       <div class="col-25">
         <h3>Rýchle odkazy</h3>
-        <p><a href="index.php">Home</a></p>
-        <p><a href="gallery.php">Gallery</a></p>
-        <p><a href="contacts.php">Contacts</a></p>
+        <?php
+           $pages = array('Domov'=>'home.php',
+           'Gallery'=>'gallery.php',
+           'Contacts'=>'contacts.php'  
+           );
+           //echo(generate_menu($pages));
+           $menu_object = new Menu($pages);
+           echo($menu_object->generate_menu());
+        ?>
       </div>
     <div class="row">
       Created by Viktoriia Oliynyk 
     </div>
 </footer>
 <?php
-        add_scripts();
+      $page_name = basename($_SERVER["SCRIPT_NAME"],'.php');
+      $page_object = new Page($page_name);
+      $page_object->add_scripts();
     ?>
 </html>
